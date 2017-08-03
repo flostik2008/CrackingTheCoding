@@ -33,6 +33,8 @@ func compressString(string: String)-> String {
 var str = "aabccccc"
 compressString(string: str)
 
-// Complexity of this algo is O(n + K^2) - where n - number of chars in input string, k - number of sequences. The reason is when we do "result = result + something", we creat a new string and copy old one char by char. To avoid this, we should use StringBuilder data struct, where concatenation of a string happens faster (becuase .append method)
+// Complexity of this algo is O(n + K^2) - where n - number of chars in input string, k - number of sequences. The reason is
+when we do "result = result + something", we creat a new string and copy old one char by char. To avoid this, we should use
+StringBuilder data struct, where concatenation of a string happens faster (becuase .append method)
 
 ```
