@@ -28,3 +28,39 @@ func countWaysFor(s: Int) -> Int {
         return countWaysFor(s: s - 1) + countWaysFor(s: s - 2) + countWaysFor(s: s - 3)
     }
 }
+
+
+// memoization
+
+func countWaysFor2(s: Int) -> Int {
+    
+    var dict = Array(repeatElement(-1, count: s))
+    return helper( s, dict)
+}
+
+func helper(_ s: Int,_ dict:[Int]) -> Int {
+    
+    var d = dict
+    
+    if s < 0 {
+        return 0
+    } else if s == 0 {
+        return 1
+    } else if (d[s] > -1) {
+        return d[s]
+    } else {
+        d[s] = helper(s - 1, d) + helper(s - 2, d) + helper(s - 3, d)
+        return d[s]
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
