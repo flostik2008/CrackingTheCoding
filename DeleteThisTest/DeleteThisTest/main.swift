@@ -16,7 +16,6 @@ print("\(img[0])\n\(img[1])\n\(img[2])\n\(img[3])\n")
 func rotate90InPlace(image: [[Int]]) -> [[Int]]? {
     
     
-    
     var img = image
     if img.count == 0 || img[0].count != img.count { return nil }
     
